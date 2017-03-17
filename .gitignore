@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+#VS files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
