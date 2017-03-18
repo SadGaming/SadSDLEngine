@@ -1,5 +1,5 @@
 #include "WindowManager.h"
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include <string>
 WindowManager* WindowManager::gInstance = NULL;
 

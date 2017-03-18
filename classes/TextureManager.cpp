@@ -1,6 +1,5 @@
 #include "TextureManager.h"
-#include <SDL.h>
-#include <SDL_image.h>
+#include "../SDLInclude.h"
 #include <map>
 #include <iostream>
 TextureManager* TextureManager::gInstance = NULL;

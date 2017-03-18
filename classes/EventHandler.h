@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include <vector>
 #include <map>
 class EventHandler
@@ -12,7 +12,7 @@ public:
 	bool containsEvent(Uint32 type);
 	void testPrint();
 	std::vector<SDL_Event> events;
-	std::map<Uint32, std::vector<SDL_Event>>eventsByType;
+	std::map<Uint32, std::vector<SDL_Event> > eventsByType;
 private:
 	EventHandler();
 	

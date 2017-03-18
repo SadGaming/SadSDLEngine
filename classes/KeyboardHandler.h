@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include "EventHandler.h"
 #include <map>
 class KeyboardHandler

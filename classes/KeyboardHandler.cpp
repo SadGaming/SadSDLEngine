@@ -1,6 +1,6 @@
 #include "KeyboardHandler.h"
 #include "EventHandler.h"
-#include <SDL.h>
+#include "../SDLInclude.h"
 KeyboardHandler* KeyboardHandler::gInstance = NULL;
 
 KeyboardHandler * KeyboardHandler::getInstance()

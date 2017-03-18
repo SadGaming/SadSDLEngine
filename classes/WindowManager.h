@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include <string>
 class WindowManager
 {

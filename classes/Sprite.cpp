@@ -1,7 +1,8 @@
 #include "Sprite.h"
 #include "TextureManager.h"
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include <string>
+#include <cmath>
 #include <iostream>
 
 Sprite::Sprite(std::string name, float xPos, float yPos, std::string filename)
@@ -33,8 +34,8 @@ void Sprite::draw() {
 	SDL_RenderCopy(gRenderer, gTexture, &sRect,&dRect);
 }
 void Sprite::update() {
-	dRect.x = (int) std::round(x);
-	dRect.y = (int) std::round(y);
+	dRect.x = (int) std::floor(x);
+	dRect.y = (int) std::floor(y);
 	dRect.w = width;
 	dRect.h = height;
 	
@@ -57,3 +58,4 @@ Sprite::~Sprite()
 {
 	SDL_DestroyTexture(gTexture);
 }
+

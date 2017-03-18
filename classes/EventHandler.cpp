@@ -1,5 +1,5 @@
 #include "EventHandler.h"
-#include <SDL.h>
+#include "../SDLInclude.h"
 #include <iostream>
 EventHandler* EventHandler::gInstance = NULL;
 int EventHandler::callCount = 0;
