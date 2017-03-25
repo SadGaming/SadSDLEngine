@@ -7,5 +7,4 @@
 #include "classes/TextureManager.h"
 #include "classes/WindowManager.h"
 #include "classes/Player.h"
-#include "classes/MapHandler.h"
 #endif
