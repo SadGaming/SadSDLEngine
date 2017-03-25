@@ -13,27 +13,28 @@ TextureManager* TextureManager::getInstance()
 }
 
 void TextureManager::addTexture(std::string name, SDL_Texture* mTexture) {
-	
-	int w, h = 0;
-	SDL_QueryTexture(mTexture, NULL, NULL, &w, &h);
-	gameReady t;
-	t.texture = mTexture;
-	t.width = w;
-	t.height = h;
-	
-	textures[name] = t;
-	
+	if(textures.count(name)==0){
+		int w, h = 0;
+		SDL_QueryTexture(mTexture, NULL, NULL, &w, &h);
+		gameReady t;
+		t.texture = mTexture;
+		t.width = w;
+		t.height = h;
+
+		textures[name] = t;
+	}
 }
 
 void TextureManager::addTexture(std::string name, std::string filename) {
-	IMG_Init(IMG_INIT_PNG);
-	SDL_Texture* mTexture = IMG_LoadTexture(gRenderer, filename.c_str());
-	if (mTexture) {
-		
-		addTexture(name, mTexture);
-	}
-	else {
-		std::cout << "Error loading img:" << IMG_GetError() << std::endl;
+	if(textures.count(name)==0){
+		IMG_Init(IMG_INIT_PNG);
+		SDL_Texture* mTexture = IMG_LoadTexture(gRenderer, filename.c_str());
+		if (mTexture) {
+			addTexture(name, mTexture);
+		}
+		else {
+			std::cout << "Error loading img:" << IMG_GetError() << std::endl;
+		}
 	}
 }
 

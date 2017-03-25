@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KEYBOARD_H
+#define KEYBOARD_H
 #include "../SDLInclude.h"
 #include "EventHandler.h"
 #include <map>
@@ -15,4 +16,4 @@ private:
 	~KeyboardHandler();
 	static KeyboardHandler* gInstance;
 };
-
+#endif

@@ -1,2 +1,2 @@
-# SadSDLGame
-A another SDL2 Game. What did you expect?
+# SadSDLEngine
+A another SDL2 Engine. What did you expect?

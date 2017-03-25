@@ -1,4 +1,5 @@
-#pragma once
+#ifndef EVENT_H
+#define EVENT_H
 #include "../SDLInclude.h"
 #include <vector>
 #include <map>
@@ -15,9 +16,8 @@ public:
 	std::map<Uint32, std::vector<SDL_Event> > eventsByType;
 private:
 	EventHandler();
-	
 	~EventHandler();
 	static EventHandler* gInstance;
 	static int callCount;
 };
-
+#endif

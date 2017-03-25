@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
 #include "Sprite.h"
 #include <iostream>
 class Player :
@@ -12,4 +13,4 @@ public:
 	~Player();
 
 };
-
+#endif

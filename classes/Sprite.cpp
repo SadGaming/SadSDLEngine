@@ -24,22 +24,15 @@ Sprite::Sprite(std::string name, float xPos, float yPos, std::string filename)
 	dRect.y = (int) y;
 	dRect.w = width;
 	dRect.h = height;
-	
 	speed = 20;
 }
 
 void Sprite::draw() {
-	
-	
 	SDL_RenderCopy(gRenderer, gTexture, &sRect,&dRect);
 }
 void Sprite::update() {
 	dRect.x = (int) std::floor(x);
 	dRect.y = (int) std::floor(y);
-	dRect.w = width;
-	dRect.h = height;
-	
-
 }
 SDL_Rect Sprite::getCollRect()
 {
@@ -58,4 +51,3 @@ Sprite::~Sprite()
 {
 	SDL_DestroyTexture(gTexture);
 }
-

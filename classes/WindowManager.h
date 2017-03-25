@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 #include "../SDLInclude.h"
 #include <string>
 class WindowManager
@@ -12,7 +13,7 @@ private:
 	SDL_Renderer* gRenderer;
 	static WindowManager* gInstance;
 	WindowManager();
-	
+
 	~WindowManager();
 };
-
+#endif

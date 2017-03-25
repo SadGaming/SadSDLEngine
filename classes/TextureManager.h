@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEXTURE_H
+#define TEXTURE_H
 #include "../SDLInclude.h"
 #include "WindowManager.h"
 #include <map>
@@ -20,7 +21,7 @@ private:
 	static TextureManager* gInstance;
 	TextureManager();
 	~TextureManager();
-	
+
 	SDL_Renderer* gRenderer;
 };
-
+#endif
