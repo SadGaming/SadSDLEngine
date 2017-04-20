@@ -6,6 +6,5 @@
 #include "classes/Sprite.h"
 #include "classes/TextureManager.h"
 #include "classes/WindowManager.h"
-#include "classes/Player.h"
 #include "classes/SpritesheetManager.h"
 #endif
