@@ -45,7 +45,7 @@ SDL_Rect* SpritesheetManager::getLocation(std::string sheetName, int spriteNum){
 	SDL_Rect* sRect = new SDL_Rect;
 	sRect->w = sh.spriteWidth;
 	sRect->h = sh.spriteHeight;
-	sRect->x = (spriteNum * sh.spriteWidth) % xLength;
-	sRect->y = (spriteNum * sh.spriteHeight) % yLength; 
+	sRect->x = (spriteNum * sh.spriteWidth) % (xLength * sh.spriteWidth);
+	sRect->y = (( (int) (spriteNum / xLength) ) * sh.spriteHeight) % sh.sheetHeight; 
 	return sRect;
 }
