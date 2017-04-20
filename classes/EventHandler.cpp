@@ -2,12 +2,11 @@
 #include "../SDLInclude.h"
 #include <iostream>
 EventHandler* EventHandler::gInstance = NULL;
-int EventHandler::callCount = 0;
 
 EventHandler* EventHandler::getInstance()
 {
 	
-	callCount++;
+
 	if(gInstance==NULL) {
 		gInstance = new EventHandler();
 	}
@@ -43,11 +42,9 @@ bool EventHandler::containsEvent(Uint32 type){
 }
 EventHandler::EventHandler()
 {
-	test += 1;
+	
 }
-void EventHandler::testPrint() {
-	std::cout << callCount << "," << test << std::endl;
-}
+
 
 EventHandler::~EventHandler()
 {
